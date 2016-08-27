@@ -1,0 +1,153 @@
+body {
+    font-family: sans-serif;
+    font-size: 13px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {text-decoration: underline;}
+
+.nav { 
+    display: block;
+    float: right;
+}
+
+.nav li {
+    display: inline-block;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+
+li img {
+    height: 80%;
+    width: 80%;
+}
+    
+img.personal {
+    height: 60%; 
+    width: 60%;
+    border-radius: 50%;
+}
+
+.main {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 25px;
+}
+
+.logo img {
+    display: block;
+    width: 270px;
+    height: 95px;
+    margin: auto;
+}
+
+.searchbar {
+    width: 600px;
+    height: 32px;
+    margin: auto;
+    position: relative;
+}
+    
+.searchbar input {
+    width: 570px;
+    height: 100%;
+    border: 1px solid gray;
+    padding: 0px 10px;
+    position: relative;
+    float: left;
+    z-index: 10;
+}
+
+.mic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mic img {
+    float: right;
+    height: 28px;
+    position: relative;
+    top: 3px;
+    right: 10px;
+    z-index: 11;
+}
+
+.button {
+    display: block;
+    margin-top: 15px;
+}
+
+.button a div {
+    margin-left: 6px;
+    margin-right: 6px;
+    border: 1px solid #DDD;
+    padding: 8px 3px;
+    display: inline-block;
+    background-color: #F2F2F2;
+    color: #5f5a5a;
+    font-size: 11px;
+    font-weight: 600;
+}
+    
+.button a div:hover {
+    border: 1px solid black;
+    color: black;
+}
+
+p a {color: blue;}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 1px;
+    margin: 0;
+    background-color: #F2F2F2;
+    border-top: 1px solid #dedede;
+}
+
+.footer .left {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 50%
+}
+
+.footer .right {
+    display: block;
+    text-align: right;
+}
+
+.footer .left ul, .footer .right ul {margin: 0;}
+
+.footer .left ul {text-align: left}
+    
+
+.footer .left ul li, .footer .right ul li {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #666;
+}
+
+.footer .left ul li {
+    padding-left: 30px;
+}
+
+.footer .right ul li{
+    padding-right: 30px;
+}
+
+
