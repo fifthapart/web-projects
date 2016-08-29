@@ -25,14 +25,6 @@ $(document).ready(function() {
         $('.box').css("background-color", "");
     });
     
-    function vanish(){
-        $('.box').hover(function() {
-            $(this).css('opacity', function(){
-                return parseFloat($(this).css('opacity')) + 0.2;
-            });
-        });
-    }
-    
     $('#shake').click(function() {
         $('.box').off();
         $('.box').css('opacity', '100%');
@@ -66,13 +58,18 @@ $(document).ready(function() {
             var oldSize = size;
             // size does not get var b/c it is global
             size = prompt("Please enter a grid size from 1 - 128.");
-            if (0 < size <= 128) {res = true}
+            if (0 < size && size <= 128) {res = true}
             else if (size === null) {
                 size = oldSize;
                 res = true
             }
+            else if (size === "") {
+                size = 40;
+                res = true
+            }
             else {alert("The size you entered is outside the range.")};
         };
+        $('.screen').empty();
         newEtch(size);
     });
 });
