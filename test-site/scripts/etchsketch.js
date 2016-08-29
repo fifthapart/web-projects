@@ -25,14 +25,38 @@ $(document).ready(function() {
         $('.box').css("background-color", "");
     });
     
-    $('#grayscale').click(function() {
-        $('.box').css('opacity',0);
-        $('.box').hover(function(){
-            console.log($(this).css('opacity'));
+    function vanish(){
+        $('.box').hover(function() {
             $(this).css('opacity', function(){
                 return parseFloat($(this).css('opacity')) + 0.2;
-                });
             });
+        });
+    }
+    
+    $('#shake').click(function() {
+        $('.box').off();
+        $('.box').css('opacity', '100%');
+        $('.box').hover(function() {
+            $(this).css('background-color', 'white');
+        }, function() {
+            $(this).css('background-color', '#191E19');
+        });
+    });
+    
+    $('#grayscale').click(function() {
+        $('.box').off();
+        $('.box').css('opacity', '100%');
+        $('.box').hover(function() {
+            $(this).css('background-color', 'white');
+        }, function() {
+            $(this).css('background-color', '#191E19');
+        });
+        $('.box').css('opacity', 0);
+        $('.box').hover(function(){
+            $(this).css('opacity', function(){
+                return parseFloat($(this).css('opacity')) + 0.2;
+            });
+        });
     });
         
     
